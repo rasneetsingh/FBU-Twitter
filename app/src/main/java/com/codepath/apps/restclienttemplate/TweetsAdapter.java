@@ -29,8 +29,6 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         this.tweets = tweets;
     }
 
-
-
     //for each row, inflate the layout
     @NonNull
     @Override
@@ -66,12 +64,16 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         ImageView ivProfileImage;
         TextView tvBody;
         TextView tvScreenName;
+        ImageView tweetImage;
+
 
         public ViewHolder(@NonNull View itemView){
             super(itemView);
             ivProfileImage = itemView.findViewById(R.id.ivProfileImage);
             tvBody = itemView.findViewById(R.id.tvBody);
             tvScreenName = itemView.findViewById(R.id.tvScreenName);
+            tweetImage = itemView.findViewById(R.id.ivtweetImg);
+
         }
 
 
@@ -79,9 +81,24 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             tvBody.setText(tweet.body);
             tvScreenName.setText(tweet.user.screenName);
             Glide.with(context).load(tweet.user.profileImageUrl).into(ivProfileImage);
+            if(tweet.imageURL != null){
+                Glide.with(context).load(tweet.imageURL).into(tweetImage);
+                tweetImage.setVisibility(View.VISIBLE);
+            }
+            else{
+                tweetImage.setVisibility(View.GONE);
+            }
 
-            
+            }
 
+        public void clear() {
+            tweets.clear();
+            notifyDataSetChanged();
+        }
+
+        public void addAll(List<Tweet> list){
+            tweets.addAll(list);
+            notifyDataSetChanged();
 
         }
     }
