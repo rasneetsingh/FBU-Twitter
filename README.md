@@ -1,6 +1,7 @@
 Project 2
 
 Name of App: Simple Tweet
+
 It is an android app that allows a user to view their Twitter timeline and post a new tweet. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
 Time Spent: 35 Hours
