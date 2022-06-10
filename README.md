@@ -6,27 +6,41 @@ It is an android app that allows a user to view their Twitter timeline and post 
 Time Spent: 35 Hours
 
 The following required functionality is completed:
+
 ☑ User can **sign in to Twitter** using OAuth login.
 
  ☑ User can **view tweets from their home timeline**.
+ 
   ☑User is displayed the username, name, and body for each tweet.
+  
  ☑ User is displayed the [relative timestamp](https://gist.github.com/nesquena/f786232f5ef72f6e10a7) for each tweet "8m", "7h".
-  ☑User can ***log out of the application** by tapping on a logout button
+ 
+  ☑User can ***log out of the application** by tapping on a logout button.
+  
   ☑User can **compose and post a new tweet**
-  ☑User can click a “Compose” icon in the Action Bar on the top right
-  ☑User can then enter a new tweet and post this to Twitter
-  ☑User is taken back to home timeline with **new tweet visible** in timeline
-  ☑Newly created tweet should be manually inserted into the timeline and not rely on a full refresh
- ☑User can **see a counter that displays the total number of characters remaining for tweet** that also updates the count as the user types input on the   Compose tweet page
-☑User can **pull down to refresh tweets timeline**
+  
+  ☑User can click a “Compose” icon in the Action Bar on the top right.
+  
+  ☑User can then enter a new tweet and post this to Twitter.
+  
+  ☑User is taken back to home timeline with **new tweet visible** in timeline.
+  
+  ☑Newly created tweet should be manually inserted into the timeline and not rely on a full refresh.
+  
+ ☑User can **see a counter that displays the total number of characters remaining for tweet** that also updates the count as the user types input on the   Compose tweet page.
+ 
+☑User can **pull down to refresh tweets timeline**.
+
 ☑User can **see embedded image media within a tweet** on list or detail view.
 
 Optional Features Completed
 
 ☑User is using **"Twitter branded" colors and styles**
+
 ☑User can click a link within a tweet body** on tweet details view. The click will launch the web browser with relevant page opened.
 
 The following additional features are completed:
+
 ☑ User can tap the 'cut' button in the compose activity and it will take back to timeline activity. 
 
 
