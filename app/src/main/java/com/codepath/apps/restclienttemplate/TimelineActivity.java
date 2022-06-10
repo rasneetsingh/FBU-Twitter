@@ -7,12 +7,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -25,6 +29,7 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import okhttp3.Headers;
 
@@ -32,6 +37,8 @@ public class TimelineActivity extends AppCompatActivity {
 
     public static final String TAG= "TimelineActivity";
     private final int REQUEST_CODE = 20;
+    private EndlessRecyclerViewScrollListener scrollListener;
+
 
     TwitterClient client;
     RecyclerView rvTweets;
@@ -45,6 +52,7 @@ public class TimelineActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
+        Objects.requireNonNull(getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.colorScreenName)));
 
 
         swipeLayout = findViewById(R.id.swipeContainer);
@@ -64,6 +72,7 @@ public class TimelineActivity extends AppCompatActivity {
             }
         });
 
+
         // Scheme colors for animation
         swipeLayout.setColorSchemeColors(
                 getResources().getColor(android.R.color.holo_blue_bright),
@@ -80,6 +89,7 @@ public class TimelineActivity extends AppCompatActivity {
         //initialize the list of tweets and adapter
         tweets = new ArrayList<>();
         adapter = new TweetsAdapter(this, tweets);
+
         rvTweets.setLayoutManager(new LinearLayoutManager(this));
         rvTweets.setAdapter(adapter);
         populateHomeTimeline();
@@ -103,9 +113,6 @@ public class TimelineActivity extends AppCompatActivity {
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // same as above
         startActivity(i);
     }
-
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -165,6 +172,7 @@ public class TimelineActivity extends AppCompatActivity {
                 Log.e(TAG, "onFailure" + response, throwable);
 
             }
+
 
         });
 

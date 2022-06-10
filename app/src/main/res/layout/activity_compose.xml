@@ -41,4 +41,15 @@
         android:layout_marginEnd="5dp"
         android:text="@string/tweet" />
 
+    <ImageView
+        android:id="@+id/cancelbtn"
+        android:layout_width="135dp"
+        android:layout_height="107dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="26dp"
+        app:srcCompat="@drawable/ic_baseline_cancel_24" />
+
+
 </RelativeLayout>
