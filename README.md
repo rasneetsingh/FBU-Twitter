@@ -44,6 +44,7 @@ Optional Features Completed
 ☑User is using **"Twitter branded" colors and styles**
 
 ☑User can click a link within a tweet body** on tweet details view. The click will launch the web browser with relevant page opened.
+☑ User can like the tweet. 
 
 
 
