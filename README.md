@@ -34,11 +34,15 @@ The following required functionality is completed:
 
 ☑User can **see embedded image media within a tweet** on list or detail view.
 
+
+
 Optional Features Completed
 
 ☑User is using **"Twitter branded" colors and styles**
 
 ☑User can click a link within a tweet body** on tweet details view. The click will launch the web browser with relevant page opened.
+
+
 
 The following additional features are completed:
 
