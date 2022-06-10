@@ -34,6 +34,9 @@ The following required functionality is completed:
 
 ☑User can **see embedded image media within a tweet** on list or detail view.
 
+Video Walkthrough
+
+![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/67130269/173158140-85a9dda9-769a-43aa-a60d-9f98a8be9c0d.gif)
 
 
 Optional Features Completed
@@ -47,6 +50,8 @@ Optional Features Completed
 The following additional features are completed:
 
 ☑ User can tap the 'cut' button in the compose activity and it will take back to timeline activity. 
+
+
 
 
 
